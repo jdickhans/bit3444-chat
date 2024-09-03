@@ -2,13 +2,13 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "HostingPlanName": {
-            "type": "string",
-            "defaultValue": "[guid(resourceGroup().id)]",
-            "metadata": {
-                "description": "Name of App Service plan"
-            }
-        },
+      "HostingPlanName": {
+        "type": "string",
+        "defaultValue": "BIT3444-TestChat",
+        "metadata": {
+          "description": "Name of App Service plan"
+        }
+      },
         "HostingPlanSku": {
             "type": "string",
             "defaultValue": "B3",
@@ -30,20 +30,20 @@
                 "description": "The pricing tier for the App Service plan"
             }
         },
-        "WebsiteName": {
-            "type": "string",
-            "defaultValue": "[guid(resourceGroup().id)]",
-            "metadata": {
-                "description": "Name of Web App"
-            }
-        },
-        "ApplicationInsightsName": {
-            "type": "string",
-            "defaultValue": "[guid(resourceGroup().id)]",
-            "metadata": {
-                "description": "Name of Application Insights"
-            }
-        },
+      "WebsiteName": {
+        "type": "string",
+        "defaultValue": "bit3444-stakeholder-chat",
+        "metadata": {
+          "description": "Name of Web App"
+        }
+      },
+      "ApplicationInsightsName": {
+        "type": "string",
+        "defaultValue": "bit3444-stakeholder-chat",
+        "metadata": {
+          "description": "Name of Application Insights"
+        }
+      },
         "AzureSearchService": {
             "type": "string",
             "defaultValue": "",
@@ -128,31 +128,34 @@
                 "description": "Url column"
             }
         },
-        "AzureOpenAIResource": {
-            "type": "string",
-            "metadata": {
-                "description": "Name of Azure OpenAI Resource"
-            }
-        },
+      "AzureOpenAIResource": {
+        "type": "string",
+        "defaultValue": "BIT3444Stakeholder",
+        "metadata": {
+          "description": "Name of Azure OpenAI Resource"
+        }
+      },
         "AzureOpenAIModel": {
-            "type": "string",
+          "type": "string",
+          "defaultValue": "gpt-40",
             "metadata": {
                 "description": "Azure OpenAI Model Deployment Name"
             }
         },
         "AzureOpenAIModelName": {
             "type": "string",
-            "defaultValue": "gpt-35-turbo",
+            "defaultValue": "gpt-40",
             "metadata": {
                 "description": "Azure OpenAI Model Name"
             }
         },
-        "AzureOpenAIKey": {
-            "type": "securestring",
-            "metadata": {
-                "description": "Azure OpenAI Key"
-            }
-        },
+      "AzureOpenAIKey": {
+        "type": "securestring",
+        "defaultValue": "bbad9e99849342dea7f72af811b240cf",
+        "metadata": {
+          "description": "Azure OpenAI Key"
+        }
+      },
         "AzureOpenAITemperature": {
             "type": "int",
             "defaultValue": 0,
