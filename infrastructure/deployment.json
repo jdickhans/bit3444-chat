@@ -151,7 +151,7 @@
         },
       "AzureOpenAIKey": {
         "type": "securestring",
-        "defaultValue": "bbad9e99849342dea7f72af811b240cf",
+        "defaultValue": "",
         "metadata": {
           "description": "Azure OpenAI Key"
         }
